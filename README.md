@@ -4,7 +4,7 @@ tf gpu installation
 
 ### create env
 ```
-conda create --name tf python=3.9
+conda create --name tf python=3.12
 conda activate tf
 ```
 
@@ -25,13 +25,13 @@ echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
 
 ### install tf
 ```
-pip install tensorflow==2.12.0
+pip install tensorflow==2.16.1
 ```
 
 ### verify install
 ```
-python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
-python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
 ```
 
